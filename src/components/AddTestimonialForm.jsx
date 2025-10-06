@@ -56,7 +56,7 @@ const AddTestimonialForm = ({ onTestimonialSubmit }) => {
 
     try {
       console.log("Backend URL:", backendLink);
-      console.log("Full URL:", `${backendLink}/api/testimonials/create-testimonials`);
+      const response = await axios.post(`${backendLink}/api/testimonials/create-testimonials`,
       console.log("Form data:", formData);
       
       // Try with JSON first (simpler approach)
